@@ -1,9 +1,9 @@
 -- Database: `iwane047_ti##`
 CREATE DATABASE
-	IF NOT EXISTS `ti92phpdb01`
+	IF NOT EXISTS `ti93phpdb01`
     DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
     
-USE `ti92phpdb01`;
+USE `ti93phpdb01`;
 
 -- --------------------------------------------------------
 -- Estrutura da tabela `tbprodutos`
