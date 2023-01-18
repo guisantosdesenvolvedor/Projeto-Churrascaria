@@ -1,1 +1,9 @@
 /* Defenindo nosso estilo... */
+@charset "utf8";
+
+.fundofixo{
+    background: url('../images/churrascariaf.jpg') no-repeat fixed;
+    -webkit-backdrop-size: cover;
+    background-size: cover;
+    
+}

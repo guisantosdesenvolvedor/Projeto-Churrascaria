@@ -10,7 +10,24 @@
 <link rel="stylesheet" href="css/estilo.css">
     <title>Chuleta Quente Churrascaria</title>
 </head>
-<body>
-    <h3  class="text-danger bg-success">index</h3>
+<body class="fundofixo">
+    <!-- area de menu  -->
+    <?php include 'menu_publico.php';?>
+    <a name="home">&nbsp;</a>
+    <main class="container">
+        <!-- area de carrossel -->
+        <?php include 'carrossel.php';?>
+        <!-- area de destaque -->
+        <a name="destaques">&nbsp;</a>
+        <?php include 'produtos_destaque.php';?>
+        <!-- area geral produtos -->
+        <a name="produtos">&nbsp;</a>
+        <?php include 'produtos_geral.php';?>
+        <!-- rodape -->
+        <footer class="panel-footer" style="background: none;">
+         <?php include 'rodape.php';?>
+         <a name="contato"></a>
+        </footer>
+    </main>
 </body>
 </html>
