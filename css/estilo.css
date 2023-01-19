@@ -5,5 +5,10 @@
     background: url('../images/churrascariaf.jpg') no-repeat fixed;
     -webkit-backdrop-size: cover;
     background-size: cover;
-    
+}
+
+.ajustes{
+    align-items: center;
+    /* background-color: #fff; */
+    padding: 20px;
 }
