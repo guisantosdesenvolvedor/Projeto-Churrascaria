@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- abrea a barra de navegação -->
-    <nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light">
+    <nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light ajustes">
             <div class="container-fluid ">
                 <!-- agrupamento mobile -->
                 <div class="navbar-header">
@@ -46,8 +46,8 @@
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <?php foreach($row_tipos as $row){?>
-                                        <li><a href="produtos_por_tipos.php?id_tipo=<?php echo $row[0]?>" <?php echo $row[2]?>></a></li>
+                                    <?php foreach($rows_tipos as $row){?>
+                                        <li><a href="produtos_por_tipo.php?id_tipo=<?php echo $row[0]?>"><?php echo $row[2]?></a></li>
                                     <?php }?>
                                 </ul>
                             </li>
@@ -75,4 +75,20 @@
             </div>
     </nav>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery/-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).on('ready',function(){
+        $(".regular").slick({
+            dots:true,
+            infinity:true,
+            slideToShow: 3,
+            slidesToScroçç: 3
+        })
+    })
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick/slick.min.js"></script>
+
 </html>
