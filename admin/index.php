@@ -1,1 +1,3 @@
-<?php ?>
+<?php 
+include '../admin/login.php';
+?>
