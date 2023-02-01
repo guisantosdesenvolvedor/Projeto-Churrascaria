@@ -1,10 +1,39 @@
-
+<?php 
+    include '../conn/connect.php';
+    //iniciar a verificaçao do login
+    if($_POST){
+        $login = $_POST['login_usuario'];
+        $senha = $_POST['senha_usuario'];
+        $loginRes = $conn->query("select * from tbusuarios where login_usuario = '$login' and senha_usuario = md5('$senha')");
+        $rowLogin = $loginRes->fetch_assoc();
+        $numRow = mysqli_num_rows($loginRes);
+        //se a sessao nao existir 
+        if(!isset($_SESSION)){
+            $sessaoAntiga = session_name('chulettaaa');
+            session_start();
+            $session_name_new = session_abort();
+        }
+        if($numRow>0){
+            $_SESSION['login_usuario'] = $login;
+            $_SESSION['nivel_usuario'] = $rowLogin['nivel_usuario'];
+            $_SESSION['nome_da_sessao'] = session_name();
+            if($rowLogin['nivel_usuario']=='sup'){
+                echo "<script>window.open('index.php','_self')</script>";
+            }
+            else{
+                echo "<script>window.open('../cliente/index.php?cliente=".$login."','_self')</script>";
+            }
+        } else{
+            echo "<script>window.open('invasor.php','_self')</script>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="10;URL=../index.php">
+    <meta http-equiv="refresh" content="30;URL=../index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
@@ -49,7 +78,7 @@
                                 <p class="text-center">
                                     <small>
                                         <br>
-                                        Caso não faça uma escolha em 15 segundos será redirecionado automaticamente para página inicial.
+                                        Caso não faça uma escolha em 30 segundos será redirecionado automaticamente para página inicial.
                                     </small>
                                 </p>
                             </div><!-- fecha alert -->
