@@ -12,7 +12,7 @@
     <title>Menu público</title>
 </head>
 <body>
-<nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light">
+<nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light ajustes">
     <div class="container-fluid">
         <!-- agrupamento mobile -->
         <div class="navbar-header">
