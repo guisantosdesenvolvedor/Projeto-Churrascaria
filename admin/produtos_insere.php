@@ -23,13 +23,12 @@ if (isset($_POST['enviar'])){
     $destaque_produto = $_POST['destaque_produto'];
     $descri_produto = $_POST['descri_produto'];
     $valor_produto = $_POST['valor_produto'];
-    $valor_produto = $_POST['valor_produto'];
     $imagem_produto = $_FILES['imagem_produto']['name'];
 
-    $insereProd = "INSERT INT tbprodutos 
-                   (id_tipo_produto, destaque_produto, descri_produto, valor_produto, valor_produto, imagem_produto)
+    $insereProd = "INSERT tbprodutos 
+                   (id_tipo_produto, destaque_produto, descri_produto, valor_produto, imagem_produto)
                     VALUES
-                    ('i$d_tipo_produto','$destaque_produto','$descri_produto','$valor_produto','$valor_produto','$imagem_produto')
+                    ('$id_tipo_produto','$destaque_produto','$descri_produto','$valor_produto','$imagem_produto')
                     ";
     $resultado = $conn -> query($insereProd);
     // após a gravação bem sucedida do produto, volata (atualiza) lista.
@@ -94,19 +93,19 @@ if (isset($_POST['enviar'])){
                                     <input type="radio" name="destaque_produto" id="destaque_produto" value="nao" checked>Não
                                     </label>
                             </div>
-                            <label for="destaque_produto">Destaque: </label>
+                            <label for="descri_produto">Descriçao: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
-                                <input type="text" name="destaque_produto" id="destaque_produto" class="form-control" placeholder="Digite a Descrição do Produto" maxlength="100" required>
+                                <input type="text" name="descri_produto" id="descri_produto" class="form-control" placeholder="Digite a Descrição do Produto" maxlength="100" required>
                             </div>
-                            <label for="valor_produto">valor: </label>
+                            <label for="resumo_produto">Resumo: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </span>
-                                <textarea  name="valor_produto" id="valor_produto" cols="30" rows="8" class="form-control" placeholder="Digite a valor do Produto" maxlength="100" required> </textarea>
+                                <textarea  name="resumo_produto" id="resumo_produto" cols="30" rows="8" class="form-control" placeholder="Digite a valor do Produto" maxlength="100" required> </textarea>
                             </div>
                             <label for="valor_produto">valor: </label>
                             <div class="input-group">
