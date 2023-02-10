@@ -51,7 +51,7 @@ if (isset($_POST['enviar'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilo.css">
-    <title>Produto - Insere</title>
+    <title>Tipos - Lista</title>
 </head>
 <body>
     <?php include "menu_adm.php";?>
@@ -64,7 +64,7 @@ if (isset($_POST['enviar'])){
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </button>
                     </a>
-                    Inserindo Produtos
+                    Inserindo Tipos
                 </h2>   
                 <div class="humbnail">
                     <div class="alert alert-danger" role="alert">
