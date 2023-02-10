@@ -1,7 +1,7 @@
 <?php 
     include 'acesso_com.php';
     include "../conn/connect.php";
-
+ 
     if($_POST){
         // se o usuario enviou o formulário
         $rotulo_tipo = $_POST['rotulo_tipo'];
@@ -43,7 +43,7 @@
                 </h2>   
                 <div class="humbnail">
                     <div class="alert alert-danger" role="alert">
-                        <form action="tipos_atualiza.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_tipos_insere" >
+                        <form action="tipos_insere.php" method="post" name="form_tipos_insere" enctype="multipart/form-data" id="form_tipos_insere" >
                             </div>
                             <label for="rotulo_tipo">Nome: </label>
                             <div class="input-group">

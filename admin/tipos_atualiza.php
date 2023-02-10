@@ -1,16 +1,16 @@
 <?php 
     include "acesso_com.php";
     include "../conn/connect.php";
-
-    if($_POST){ 
+        if($_POST){ 
+        $id_tipo = $_POST['id_tipo'];
         $sigla_tipo = $_POST['sigla_tipo'];
         $rotulo_tipo = $_POST['rotulo_tipo'];
-
+ 
         $id = $_POST['id_tipo'];
 
         $updSql = "update tbtipos
             set sigla_tipo = '$sigla_tipo',
-            rotulo_tipo = '$rotulo_tipo',
+            rotulo_tipo = '$rotulo_tipo'
             where id_tipo = $id;";
 
     $resultado = $conn->query($updSql);
@@ -31,7 +31,7 @@ $lista = $conn -> query("select * from tbtipos where id_tipo = $id_form");
 
 
      // selecionar os dados de chave estrangeira (Lista de tipos de produtos) 
-    $consulta_fk = "select * from tbtipos order by rotulo_tipo asc";
+    $consulta_fk = "select * from tbtipos order by id_tipo asc";
     $lista_fk = $conn -> query($consulta_fk);
     $row_fk = $lista_fk -> fetch_assoc();
     $nlinhas = $lista_fk -> num_rows;
@@ -62,21 +62,26 @@ $lista = $conn -> query("select * from tbtipos where id_tipo = $id_form");
                 <div class="humbnail">
                     <div class="alert alert-danger" role="alert">
                         <form action="tipos_atualiza.php" method="post" 
-                            name="form_produto_insere" enctype="multipart/form-data" 
-                            id="form_produto_insere">
+                            name="form_tipos_atualiza" enctype="multipart/form-data" 
+                            id="form_tipos_atualiza">
+                            <input type="hidden" name="id_tipo" id="id_tipo" value="<?php echo $row['id_tipo']?>">
                             <label for="rotulo_tipo">Nome: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
-                                <input type="text" name="rotulo_tipo" id="rotulo_tipo" class="form-control" placeholder="Digite o nome do Tipo" maxlength="100" required value="<?php echo $row['rotulo_tipo'];?>">
+                                <input type="text" name="rotulo_tipo" id="rotulo_tipo" class="form-control" 
+                                placeholder="Digite o nome do Tipo" maxlength="100" required 
+                                value="<?php echo $row['rotulo_tipo'];?>">
                             </div>
                             <label for="sigla_tipo">Sigla: </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
-                                <input type="text" name="sigla_tipo" id="sigla_tipo" class="form-control" placeholder="Digite a sigla do Tipo ex:chu " maxlength="100" required value="<?php echo $row['sigla_tipo'];?>">
+                                <input type="text" name="sigla_tipo" id="sigla_tipo" class="form-control"
+                                 placeholder="Digite a sigla do Tipo ex:chu " maxlength="100" required
+                                  value="<?php echo $row['sigla_tipo'];?>">
                             </div>
                             <br>
                             <input type="submit" name="atualizar" id="atualizar" class="btn btn-danger btn-block" value="Atualizar">
