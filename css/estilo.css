@@ -12,3 +12,18 @@
     /* background-color: #fff; */
     padding: 20px;
 }
+
+.card-deck{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20px 00px 40px;
+}
+
+.card{
+    padding: 20px;
+}
+
+.k1 h1{
+    display: flex;
+    justify-content: center;
+}
