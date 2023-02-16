@@ -27,3 +27,13 @@
     display: flex;
     justify-content: center;
 }
+
+.res{
+    display: flex;
+    justify-content: center;
+}
+
+.reserva{
+    display: flex;
+    justify-content: space-around;
+}

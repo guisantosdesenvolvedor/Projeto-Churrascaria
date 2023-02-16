@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                        <a href="reserva.php"><button type="button" class="btn btn-primary">Continuar</button></a>
+                                        <a href="login_cliente.php"><button type="button" class="btn btn-primary">Continuar</button></a>
                                     </div>
                                     </div>
                                 </div>
