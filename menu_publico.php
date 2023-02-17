@@ -35,29 +35,29 @@
             </button>
             <!-- modal button -->
                                             <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel"><h1>Regras de pedidos</h1></h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
+                                                 <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                              <h5 class="modal-title" id="exampleModalLabel"><h1>Regras de pedidos</h1></h5>
+                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                     </button>
+                                                            </div>
+                                                                 <div class="modal-body">
                                     
-                                    <p>
-                                        1- O pedido deve ser feito com 48horas de antecedencia e no maximo 90 dias. <br>
-                                        2-  Apenas um pedido por CPF. <br>
-                                        3- O cliente deve apresentar o documento na entrada do restaurante.
-                                    </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                        <a href="login_cliente.php"><button type="button" class="btn btn-primary">Continuar</button></a>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
+                                                                    <p>
+                                                                        1- O pedido deve ser feito com 48horas de antecedencia e no maximo 90 dias. <br>
+                                                                        2-  Apenas um pedido por CPF. <br>
+                                                                        3- O cliente deve apresentar o documento na entrada do restaurante.
+                                                                    </p>
+                                                                </div>
+                                                             <div class="modal-footer">
+                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                  <a href="login_cliente.php"><button type="button" class="btn btn-primary">Continuar</button></a>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+                                                  </div>
                 <!-- fim -->
                 <li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span></a></li>
                 <li><a href="index.php#destaques">DESTAQUES</a></li>

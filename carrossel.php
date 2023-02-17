@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Carousel</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <img src="images/banner_1.jpg" alt="" class="center-block">
             </div>
             <div class="item ">
-                <img src="images/imagem1carros.jpg" alt="" class="center-block">
+                <a href="login_cliente.php"><img src="images/Banner para Mercado Shops Natal Ofertas Elegante Preto (1).png" alt="" class="center-block"></a>
             </div>
             <div class="item ">
                 <img src="images/imagem2carros.png" alt="" class="center-block">
@@ -32,6 +33,5 @@
             <span class="sr-only">Próximo</span>
         </a>
     </div>
-
 </body>
 </html>

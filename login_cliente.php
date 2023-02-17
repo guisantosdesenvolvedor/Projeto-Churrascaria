@@ -21,7 +21,7 @@
                 $_SESSION['nivel_usuario'] = $rowLogin['nivel_usuario'];
                 $_SESSION['nome_da_sessao'] = session_name();
                 if($rowLogin['nivel_usuario']=='cli'){
-                    echo "<script>window.open('reserva.php','_self')</script>";
+                    echo "<script>window.open('area_reserva.php','_self')</script>";
                 }
                 else{
                     echo "<script>window.open('cliente/index.php?admin=".$login."','_self')</script>";

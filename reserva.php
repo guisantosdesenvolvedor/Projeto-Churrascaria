@@ -4,14 +4,14 @@
         $nome = $_POST['nome'];
         $data_reserva = $_POST['data_reserva'];
         $quantidade = $_POST['quantidade'];
-        $insereUser = "INSERT reserva
-                    (nome, data_reserva, quantidade)
+        $insereUser = "INSERT tbreservas
+                    (nome, data_reserva, data_enviada, quantidade)
                     VALUES
-                    ('$nome', '$data_reserva',' $quantidade')
+                    ('$nome', '$data_reserva',now(),' $quantidade')
                     ";
         $resultado = $conn->query($insereUser);
         if(mysqli_insert_id($conn)){
-            header('location: pedido_reserva.php');
+           header('location: area_reserva.php;');
         }
     }
 ?> 
@@ -39,7 +39,7 @@
                 </h2>   
                 <div class="humbnail">
                     <div class="alert alert-danger" role="alert">
-                        <form action="cadastro.php" method="post" name="form_usuario_insere"
+                        <form action="reserva.php" method="post" name="form_usuario_insere"
                          enctype="multipart/form-data" id="form_usuario_insere" >
                             </div>
                             <label for="nome">Nome Completo: </label>
@@ -65,7 +65,7 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
-                                <input type="email" name="quantidade" id="quantidade" 
+                                <input type="text" name="quantidade" id="quantidade" 
                                 class="form-control" placeholder="Quantidade de pessoas:" 
                                 maxlength="100" required>
                             </div>

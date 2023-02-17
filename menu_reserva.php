@@ -19,7 +19,7 @@
             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menupublico" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
                 <span class="icon-bar"></span>
             </button>
             <a href="index.php" class="navbar-brand">
