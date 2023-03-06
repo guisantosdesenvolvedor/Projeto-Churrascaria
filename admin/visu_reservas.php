@@ -1,5 +1,6 @@
 <?php 
-include 'conn/connect.php';
+include 'acesso_com.php';
+include '../conn/connect.php';
 $lista = $conn->query("select * from tbreservas;");
 $row = $lista->fetch_assoc();
 $rows = $lista->num_rows;
@@ -12,11 +13,11 @@ $rows = $lista->num_rows;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos - Lista</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body> 
-    <?php include "menu_reserva.php"; ?>
+    <?php include "menu_adm.php"; ?>
     <main class="container">
         <h2 class="breadcrumb alert-danger" >Tipos de Produtos</h2>
         <table class="table table-hover table-condensed tb-opacidade"> 
@@ -61,6 +62,18 @@ $rows = $lista->num_rows;
                             <span class="hidden-xs"></span>
                         </td>
                         <td>
+                            <button class="btn btn-xs btn-block btn-success">
+                                <span class="hidden-xs"> Confirmar</span>
+                                <span class="glyphicon glyphicon-thumbs-up"></span>
+                                <?php if($_POST){
+                                    $status = 'confirmar';
+                                    $insereUser = "UPDATE tbreservas
+                                    SET statuss = ('$status')
+                                    WHERE id = '8'
+                                    ";
+                        $resultado = $conn->query($insereUser);
+                                }?>
+                            </button>
                             <button 
                                 class="btn btn-xs btn-block btn-danger"
                                 >

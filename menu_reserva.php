@@ -30,9 +30,7 @@
         <!-- nav direita -->
         <div class="collapse navbar-collapse" id="menupublico">
             <ul class="nav navbar-nav navbar-right">
-
             <!-- modal button -->
-            
                 <li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span></a></li>
                 <li><a href="index.php#destaques">DESTAQUES</a></li>
                 <li><a href="index.php#produtos">PRODUTOS</a></li>

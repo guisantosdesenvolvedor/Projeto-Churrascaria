@@ -12,7 +12,7 @@
            
             print_r($rowLogin);
             if(!isset($_SESSION)){
-                $sessaoAntiga = session_name('chulettaaa');
+                $sessaoAntiga = session_name('chulettaa');
                 session_start();
                 $session_name_new =  session_name();
             }
@@ -24,7 +24,7 @@
                     echo "<script>window.open('area_reserva.php','_self')</script>";
                 }
                 else{
-                    echo "<script>window.open('cliente/index.php?admin=".$login."','_self')</script>";
+                    echo "<script>window.open('cliente/index.php?cli=".$login."','_self')</script>";
                 }
             } else{
                 echo "<script>window.open('admin/invasor.php','_self')</script>";

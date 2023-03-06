@@ -4,14 +4,16 @@
         $nome = $_POST['nome'];
         $data_reserva = $_POST['data_reserva'];
         $quantidade = $_POST['quantidade'];
+        $id_usuario = 1;
+        $status = [''];
         $insereUser = "INSERT tbreservas
-                    (nome, data_reserva, data_enviada, quantidade)
+                    (nome, data_reserva, data_enviada, quantidade, tbusuarios_id_usuario, statuss )
                     VALUES
-                    ('$nome', '$data_reserva',now(),' $quantidade')
+                    ('$nome', '$data_reserva',now(),' $quantidade','$id_usuario ',' $status')
                     ";
         $resultado = $conn->query($insereUser);
         if(mysqli_insert_id($conn)){
-           header('location: area_reserva.php;');
+           header('location: area_reserva.php');
         }
     }
 ?> 

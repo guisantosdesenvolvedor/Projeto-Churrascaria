@@ -47,7 +47,7 @@
                     </a>
                 </div><!-- fecha btn-group -->
             </div><!-- fecha btn-group-justified -->
-
+        
         </div><!-- fecha alert-danger -->
     </div><!-- fecha thumbnail -->
 </div><!-- fecha col -->
@@ -79,6 +79,32 @@
                     <a href="tipos_insere.php">
                         <button class="btn btn-warning">
                             INSERIR
+                        </button>
+                    </a>
+                </div><!-- fecha btn-group -->
+            </div><!-- fecha btn-group-justified -->
+
+        </div><!-- fecha alert-warning -->
+    </div><!-- fecha thumbnail -->
+</div><!-- fecha col -->
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail alert-warning">
+        <img src="../imagens/icone_tipos.png" alt="">
+        <br>
+        <div class="alert-warning">
+            <div class="btn-group btn-group-justified" role="group">
+                <div class="btn-group">
+                    <button class="btn btn-default disabled" role="alert" style="cursor: default;">
+                        RESERVAS
+                    </button>
+                </div><!-- fecha btn-group -->
+            </div><!-- fecha btn-group-justified -->
+
+            <div class="btn-group btn-group-justified" role="group">
+                <div class="btn-group">
+                    <a href="visu_reservas.php">
+                        <button class="btn btn-warning">
+                            VISUALIZAR
                         </button>
                     </a>
                 </div><!-- fecha btn-group -->
